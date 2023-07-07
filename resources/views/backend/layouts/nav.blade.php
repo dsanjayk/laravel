@@ -15,7 +15,7 @@
                 </form>
 
                 <div id="navbar-menu">
-                    <!-- <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav">
                         <li>
                             <a href="file-dashboard.html" class="icon-menu d-none d-sm-block d-md-none d-lg-block"><i class="fa fa-folder-open-o"></i></a>
                         </li>
@@ -105,9 +105,18 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="page-login.html" class="icon-menu"><i class="icon-login"></i></a>
+                            <!-- <a href="page-login.html" class="icon-menu"><i class="icon-login"></i></a> -->
+                            <a class="dropdown-item icon-menu" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                <i class="icon-login"></i>
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </li>
-                    </ul> -->
+                    </ul>
                 </div>
             </div>
         </div>
