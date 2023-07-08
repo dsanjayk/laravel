@@ -43,6 +43,12 @@
                     <nav class="sidebar-nav">
                         <ul class="main-menu metismenu">
                             <li class="active"><a href="index.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Banners</span> </a>
+                                <ul>
+                                    <li><a href="{{route('banner.index')}}">All Banners</a></li>
+                                    <li><a href="{{route('banner.create')}}">Add Banner</a></li>
+                                </ul>
+                            </li>
                             <li><span>-- Add</span></li>
                             <li><a href="add-professors.html"><i class="icon-users"></i> <span>Professors</span></a></li>
                             <li><a href="add-students.html"><i class="icon-users"></i> <span>Students</span></a></li>
