@@ -23,61 +23,67 @@
                 <div class="card">
                     <div class="header">  
                     </div>
-                    <div class="body">
-                        <div class="row clearfix">
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <label for="Title">Title</label>
-                                    <input type="text" class="form-control" placeholder="Title" name="title" value="{{old('title')}}">
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <label for="Title">Description</label>
-                                    <textarea class="form-control" placeholder="Description">{{old('description')}}</textarea>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <label for="Photo">Photo</label>
-                                    <div class="input-group">
-                                    <span class="input-group-btn">
-                                        <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-                                        <i class="fa fa-picture-o"></i> Choose
-                                        </a>
-                                    </span>
-                                    <input id="thumbnail" class="form-control" type="text" name="filepath">
+                    <form action="{{route('banner.store')}}" method="post">
+                        @csrf
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <label for="Title">Title</label>
+                                        <input type="text" class="form-control" placeholder="Title" name="title" value="{{old('title')}}">
                                     </div>
-                                    <div id="holder" style="margin-top:15px;max-height:100px;"></div>
+                                </div>
+                                
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <label for="Photo">Photo</label>
+                                        <div class="input-group">
+                                        <span class="input-group-btn">
+                                            <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                                            <i class="fa fa-picture-o"></i> Choose
+                                            </a>
+                                        </span>
+                                        <input id="thumbnail" class="form-control" type="text" name="photo">
+                                        </div>
+                                        <div id="holder" style="margin-top:15px;max-height:100px;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <label for="Description">Description</label>
+                                        <textarea class="form-control" placeholder="Description" id="description" name="description">{{old('description')}}</textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-4 col-md-6 col-sm-12">                                
+                                    <select class="form-control show-tick" name="status">
+                                        <option value="">-- Status --</option>
+                                        <option value="active" {{old('status') == 'active' ? 'selected' : '' }}>Active</option>
+                                        <option value="inactive" {{old('status') == 'inactive' ? 'selected' : '' }}>Inactive</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-4 col-md-6 col-sm-12">                                
+                                    <select class="form-control show-tick" name="condition">
+                                        <option value="">-- Condition --</option>
+                                        <option value="banner" {{old('condition') == 'banner' ? 'selected' : '' }}>Banner</option>
+                                        <option value="promo" {{old('condition') == 'promo' ? 'selected' : '' }}>Promotion</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix">
+                                <div class="col-sm-12">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-outline-secondary">Cancel</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="row clearfix">
-                            <div class="col-lg-4 col-md-6 col-sm-12">                                
-                                <select class="form-control show-tick">
-                                    <option value="">-- Status --</option>
-                                    <option value="active" {{old('status') == 'active' ? 'selected' : '' }}>Active</option>
-                                    <option value="inactive" {{old('status') == 'inactive' ? 'selected' : '' }}>Inactive</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row clearfix">
-                            <div class="col-lg-4 col-md-6 col-sm-12">                                
-                                <select class="form-control show-tick">
-                                    <option value="">-- Condition --</option>
-                                    <option value="banner" {{old('condition') == 'banner' ? 'selected' : '' }}>Banner</option>
-                                    <option value="promo" {{old('condition') == 'promo' ? 'selected' : '' }}>Promotion</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="row clearfix">
-                            <div class="col-sm-12">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                                <button type="submit" class="btn btn-outline-secondary">Cancel</button>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -94,5 +100,9 @@
     <script>
         $('#lfm').filemanager('image');
     </script>
-
+    <script>
+        $(document).ready(function() {
+            $('#description').summernote();
+        });
+    </script>
 @endsection

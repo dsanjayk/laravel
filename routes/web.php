@@ -29,4 +29,6 @@ Route::group(['prefix'=>'admin','middelware'=>'auth'], function(){
 
     // Banner Section
     Route::resource('banner', App\Http\Controllers\BannerController::class );
+
+    Route::post('banner_status', [ App\Http\Controllers\BannerController::class, 'bannerStatus'])->name('banner.status');
 });

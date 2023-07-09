@@ -13,8 +13,12 @@
 <link rel="stylesheet" href="{{asset('backend/assets/vendor/jvectormap/jquery-jvectormap-2.0.3.min.css')}}"/>
 <link rel="stylesheet" href="{{asset('backend/assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css')}}">
 <link rel="stylesheet" href="{{asset('backend/assets/vendor/morrisjs/morris.min.css')}}" />
-
-
+<!-- SUMMERNOTE -->
+<link href="{{asset('backend/summernote/summernote.min.css')}}" rel="stylesheet">
+<!-- Datatable -->
+<link rel="stylesheet" href="{{asset('backend/assets/vendor/jquery-datatable/dataTables.bootstrap4.min.css')}}">
+<!-- Switch button -->
+<link rel="stylesheet" href="{{asset('backend/switch-button-bootstrap/css/bootstrap-switch-button.css')}}">
 <!-- MAIN CSS -->
 <link rel="stylesheet" href="{{asset('backend/assets/css/main.css')}}">
 <link rel="stylesheet" href="{{asset('backend/assets/css/color_skins.css')}}">

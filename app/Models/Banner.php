@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Banner extends Model
 {
     use HasFactory;
-    protected $fillabel = ['title','slug','description','photo','status'];
+    protected $fillable = ['title','slug','photo','description','status','condition'];
 }
