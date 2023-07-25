@@ -49,67 +49,38 @@
                                     <li><a href="{{route('banner.create')}}">Add Banner</a></li>
                                 </ul>
                             </li>
-                            <li><span>-- Add</span></li>
-                            <li><a href="add-professors.html"><i class="icon-users"></i> <span>Professors</span></a></li>
-                            <li><a href="add-students.html"><i class="icon-users"></i> <span>Students</span></a></li>
-                            <li><a href="add-parents.html"><i class="icon-user"></i>Parents</a></li>
-                            <li><span>-- List</span></li>
-                            <li><a href="professors-list.html"><i class="icon-users"></i> <span>Professors</span></a></li>
-                            <li><a href="students-list.html"><i class="icon-users"></i> <span>Students</span></a></li>
-                            <li><a href="parents.html"><i class="icon-user"></i>Parents</a></li>
-                            <li><span>-- University</span></li>
-                            <li><a href="events.html"><i class="icon-user"></i>Events</a></li>
-                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Departments</span> </a>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Categories</span> </a>
                                 <ul>
-                                    <li><a href="departments.html">All Departments</a></li>
-                                    <li><a href="add-departments.html">Add Departments</a></li>
+                                    <li><a href="{{route('category.index')}}">All Categories</a></li>
+                                    <li><a href="{{route('category.create')}}">Add Category</a></li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-graduation"></i><span>Courses</span> </a>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Brands</span> </a>
                                 <ul>
-                                    <li><a href="courses.html">All Courses</a></li>
-                                    <li><a href="add-courses.html">Add Courses</a></li>
-                                    <li><a href="courses-info.html">Courses Info</a></li>
+                                    <li><a href="departments.html">All Brands</a></li>
+                                    <li><a href="add-departments.html">Add Brand</a></li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-notebook"></i><span>Library</span> </a>
+                            
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Products</span> </a>
                                 <ul>
-                                    <li><a href="add-library.html">Add Library</a></li>
-                                    <li><a href="library.html">List Library</a></li>
+                                    <li><a href="departments.html">All Products</a></li>
+                                    <li><a href="add-departments.html">Add Product</a></li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-share fa-rotate-90 d-inline-block"></i><span>Class</span> </a>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-wallet"></i><span>Orders</span> </a>
                                 <ul>
-                                    <li><a href="add-classroom.html">Add Class</a></li>
-                                    <li><a href="classroom.html">List Class</a></li>
+                                    <li><a href="departments.html">All Orders</a></li>
+                                    <li><a href="add-departments.html">Add Order</a></li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-wallet"></i><span>Payments</span> </a>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Users</span> </a>
                                 <ul>
-                                    <li><a href="payments.html">Payments</a></li>
-                                    <li><a href="payments-add.html">Add Payment</a></li>
-                                    <li><a href="payments-invoice.html">Invoice</a></li>
+                                    <li><a href="departments.html">All Users</a></li>
+                                    <li><a href="add-departments.html">Add User</a></li>
                                 </ul>
                             </li>
-                            <li><a href="noticeboard.html"><i class="icon-info"></i>Noticeboard</a></li>
-                            <li><a href="app-taskboard.html"><i class="icon-list"></i>Taskboard</a></li>
-                            <li><a href="our-centres.html"><i class="icon-pin"></i>University Centres</a></li>
-                            <li><a href="hostel.html"><i class="icon-target"></i>Hostel</a></li>
-                            <li><a href="transport.html"><i class="icon-support"></i>Transport</a></li>
-                            <li><span>-- Extra</span></li>
-                            <li>
-                                <a href="#Authentication" class="has-arrow"><i class="icon-lock"></i><span>Authentication</span></a>
-                                <ul>
-                                    <li><a href="page-login.html">Login</a></li>
-                                    <li><a href="page-register.html">Register</a></li>
-                                    <li><a href="page-lockscreen.html">Lockscreen</a></li>
-                                    <li><a href="page-forgot-password.html">Forgot Password</a></li>
-                                    <li><a href="page-404.html">Page 404</a></li>
-                                    <li><a href="page-403.html">Page 403</a></li>
-                                    <li><a href="page-500.html">Page 500</a></li>
-                                    <li><a href="page-503.html">Page 503</a></li>
-                                </ul>
-                            </li>
+                            
                         </ul>
                     </nav>
                 </div>
