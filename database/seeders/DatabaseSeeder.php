@@ -18,6 +18,9 @@ class DatabaseSeeder extends Seeder
         // Category table seeder
         \App\Models\Category::factory(10)->create();
         
+        // Brand table seeder
+        \App\Models\Brand::factory(10)->create();
+        
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',

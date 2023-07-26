@@ -57,8 +57,8 @@
                             </li>
                             <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Brands</span> </a>
                                 <ul>
-                                    <li><a href="departments.html">All Brands</a></li>
-                                    <li><a href="add-departments.html">Add Brand</a></li>
+                                    <li><a href="{{route('brand.index')}}">All Brands</a></li>
+                                    <li><a href="{{route('brand.create')}}">Add Brand</a></li>
                                 </ul>
                             </li>
                             
