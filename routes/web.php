@@ -1,44 +1,25 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/login', function () {
+    return view('login');
 });
 
-Auth::routes(['register'=>false]);
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// Admin Dashboard
-
-Route::group(['prefix'=>'admin','middelware'=>'auth'], function(){
-
-    Route::get('/',[App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
-
-    // Banner Section
-    Route::resource('banner', App\Http\Controllers\BannerController::class );
-
-    Route::post('banner_status', [ App\Http\Controllers\BannerController::class, 'bannerStatus'])->name('banner.status');
-
-    // Category Section
-    Route::resource('category', App\Http\Controllers\CategoryController::class );
-
-    Route::post('category_status', [ App\Http\Controllers\CategoryController::class, 'categoryStatus'])->name('category.status');
-
-    // Brand Section
-    Route::resource('brand', App\Http\Controllers\BrandController::class );
-
-    Route::post('brand_status', [ App\Http\Controllers\BrandController::class, 'brandStatus'])->name('brand.status');
+Route::post("/login", [UserController::class,'login']);
+Route::get("/logout", function(){
+    Session::forget('user');
+    return redirect('login');
 });
+
+Route::get("/", [ProductController::class,'index']);
+// php artisan route:clear
+Route::get("/detail/{id}", [ProductController::class,'detail']);
+
+Route::post("add_to_cart", [ProductController::class,'addToCart']);
+
+Route::get("cart_products", [ProductController::class,'cartProductList']);
+
+Route::get("remove_cart_product/{id}", [ProductController::class,'removeCartProduct']);
