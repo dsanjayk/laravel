@@ -14,6 +14,6 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', [ProductController::class,'index'])->name('product.index');
-Route::get('/addproduct',[ProductController::class,'create'])->name('product.create');
-Route::post('/saveproduct',[ProductController::class,'store'])->name('product.store');
+Route::get('/', function(){
+    echo "hello rest api";
+});
